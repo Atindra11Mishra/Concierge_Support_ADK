@@ -1,9 +1,9 @@
-# Helix SROP
+# Concierge_Support_ADK
 
-AI Support Concierge for the Helix take-home assignment. The service exposes a
-FastAPI API that creates support sessions, routes chat turns through Google ADK
-agents, answers product questions from a local RAG corpus, handles mocked account
-lookups, persists session state, and stores structured traces.
+Persistent Support Concierge built on Google ADK. The service exposes a FastAPI
+API that creates support sessions, routes chat turns through ADK agents,
+answers product questions from a local RAG corpus, handles mocked account
+lookups, persists session state across restarts, and stores structured traces.
 
 ## Setup
 
