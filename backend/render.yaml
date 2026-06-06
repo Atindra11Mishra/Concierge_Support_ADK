@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: concierge-support-adk
+    runtime: python
+    plan: free
+    buildCommand: pip install uv && uv sync --frozen --no-dev
+    startCommand: uv run python -m app.rag.ingest --path docs && uv run uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /healthz
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: DATABASE_URL
+        value: sqlite+aiosqlite:///./concierge_support_adk.db
+      - key: CHROMA_PERSIST_DIR
+        value: ./chroma_db
+      - key: ADK_MODEL
+        value: gemini-3-flash-preview
+      - key: LLM_TIMEOUT_SECONDS
+        value: "30"
+      - key: TOOL_TIMEOUT_SECONDS
+        value: "10"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false

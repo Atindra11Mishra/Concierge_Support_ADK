@@ -1,0 +1,16 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.7 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.29.13:3000
+✓ Ready in 1440ms
+Creating turbopack project {
+  dir: 'C:\\Coding\\Assigment\\main\\Concierge_Support_ADK\\frontend',
+  testMode: true
+}
+
+○ Compiling / ...
+ GET / 200 in 3.8s (next.js: 3.5s, application-code: 292ms)
+ GET / 200 in 94ms (next.js: 10ms, application-code: 83ms)

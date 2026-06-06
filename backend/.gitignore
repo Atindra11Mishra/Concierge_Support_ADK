@@ -1,0 +1,8 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+concierge_support_adk.db
+chroma_db/
