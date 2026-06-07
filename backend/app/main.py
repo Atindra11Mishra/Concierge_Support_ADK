@@ -24,10 +24,11 @@ allowed_origins = [
     for origin in settings.allowed_origins.split(",")
     if origin.strip()
 ]
+allow_all_origins = "*" in allowed_origins
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allowed_origins,
+    allow_origins=["*"] if allow_all_origins else allowed_origins,
     allow_credentials=False,
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],

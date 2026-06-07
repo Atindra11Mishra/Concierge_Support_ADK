@@ -212,11 +212,13 @@ starting Uvicorn:
 uv run python -m app.rag.ingest --path docs && uv run uvicorn app.main:app --host 0.0.0.0 --port $PORT
 ```
 
-For local frontend development, the API allows:
+For local frontend development, the API can allow all browser origins:
 
 ```env
-ALLOWED_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
+ALLOWED_ORIGINS=*
 ```
+
+For stricter production CORS, replace `*` with the deployed frontend URL.
 
 For Docker:
 

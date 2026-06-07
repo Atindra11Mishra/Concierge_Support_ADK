@@ -18,7 +18,7 @@ class Settings(BaseSettings):
 
     llm_timeout_seconds: int = 30
     tool_timeout_seconds: int = 10
-    allowed_origins: str = "http://localhost:3000,http://127.0.0.1:3000"
+    allowed_origins: str = "*"
 
 
 settings = Settings()
