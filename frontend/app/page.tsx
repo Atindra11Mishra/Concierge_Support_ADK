@@ -21,7 +21,7 @@ type Trace = {
 };
 
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") || "http://localhost:8000";
+  process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") || "https://concierge-support-adk.onrender.com";
 
 const starterPrompts = [
   "How do I rotate a deploy key?",
